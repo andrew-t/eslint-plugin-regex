@@ -24,7 +24,7 @@ const rule = {
 
     create: context => {
         const sourceCode = context.getSourceCode();
-        const regex = new RegExp(context.options[0].pattern, context.options[0].flags);
+        const regex = new RegExp(context.options[0].pattern, context.options[0].flags || '');
 
         return {
             Program: node => {
@@ -37,7 +37,7 @@ const rule = {
                                 line: index + 1,
                                 column: match.index
                             },
-                            message: "Evil regex matched"
+                            message: context.options[0].message || "Evil regex matched"
                         });
                 });
             }
