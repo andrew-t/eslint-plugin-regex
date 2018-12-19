@@ -2,7 +2,7 @@
 
 "use strict";
 
-module.exports = {
+const rule = {
     meta: {
         type: "layout",
 
@@ -43,4 +43,8 @@ module.exports = {
             }
         };
     }
+};
+
+module.exports.rules = {
+    regex: rule
 };
