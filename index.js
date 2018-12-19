@@ -16,7 +16,8 @@ const rule = {
             type: "object",
             properties: {
                 pattern: { type: "string" },
-                flags: { type: "string" }
+                flags: { type: "string" },
+                message: { type: "message" }
             },
             additionalProperties: false
         }]
